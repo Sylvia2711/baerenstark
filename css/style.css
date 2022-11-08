@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:
+  }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+h1 {
+  font-size: 2.1em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.1em;
+}
+h5 {
+  font-size: 0.9em;
+}
+h6 {
+  font-size: 0.6em;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.zone {
+  border-radius: 2px;
+  border:  1px solid rgb(248, 247, 247);
+  transition: all 0.3s linear;
+}
+
+.zone:hover {
+  -webkit-box-shadow:  rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -moz-box-shadow:  rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  -o-box-shadow:   rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  box-shadow:   rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+/* NAV */
+
+nav, .footer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  list-style: none;
+  background-color: #27f;
+  z-index: 1;
+}
+
+nav {
+  top: 0;
+  height: 8vh;
+}
+
+
+.logo {
+  margin: 0.5vh 6vw auto 4vw;
+  font-size: 0.6em;
+  }
+
+nav img{
+  border-radius: 15%;
+  border: 2px solid white;
+  }
+
+nav .main-nav {
+  overflow: hidden;
+  }
+
+nav .main-nav a {
+/*  float: right;  */
+justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 2vh 1vw;
+  text-decoration: none;
+  font-size: 1.4em;
+  overflow: hidden;
+   }
+
+ nav .main-nav :hover{
+  color: rgb(7, 7, 7);
+  }
+
+nav .main-nav .icon {
+display: none;
+}
+
+@media screen and (max-width: 800px) {
+nav .main-nav a {display: none;}    /*  falls Home noch angezeigt werden soll:   .main-nav a:not(:first-child) {display: none;}     */
+nav .main-nav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+@media screen and (max-width: 800px) {
+nav .main-nav.responsive {position: relative;}
+nav .main-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+nav .main-nav.responsive a {
+  float: none;
+  display: block;
+  text-align: right;
+  background-color: #27f;
+ }
+}
+
+nav .flex-item-tel {
+  display: block;
+  width: 12vw;
+  justify-content: center;
+  text-align: center;
+  margin: 0.4vh 0vw 0.4vh 6vw;
+  }
+
+nav .flex-item-tel a{
+  font-size: 1.1em;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width:1300px) {
+  nav .flex-item-tel a{
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width:900px) {
+  nav .flex-item-tel {
+    display: none;
+  }
+}
+
+.banner {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #eee;
+  padding: 1% 1%;
+  width: 20%;
+  border-width: 5px;
+  border-color: green;
+}
+
+
+.ueberschrift {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8vh;
+  text-align: center;
+}
+
+.ueberschrift h1 {
+  color: rgb(3, 1, 134);
+  text-align: center;
+  padding-top: 3%;
+  }
+
+.dienstleistungen {
+  display: grid;
+  gap: 0.2%;
+  grid-template-columns: 2fr 2fr 1fr;
+  margin: 5% 5% auto 10%;
+  text-align: left;
+   }
+
+.dienstleistungen ul {
+  list-style-type: none;
+  letter-spacing: 0.2em;
+  }
+
+
+.dienstleistungen li {
+  color: rgb(3, 1, 134);
+  font-size: 1.7em;
+}
+
+.bear {
+  margin: -5% 5% 2% 0%;
+  height: auto;
+  width: 15%;
+  z-index: -1;
+  position: relative;
+  padding: 2% 2%;
+  animation: bear-fly-in 4s ease-in-out 0s 1 both,
+      bear-turbolences 8s ease-in-out 4.5s infinite none;
+  }
+
+  @keyframes bear-fly-in {
+  0% {
+    opacity: 0;
+    transform: translate(-10vw, 0);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translate(0vw, 0);
+      }
+  }
+
+.minibagger {
+  margin: 15% 5% 2% 0%;
+  height: 40vh;
+  width: auto;
+  z-index: -1;
+}
+
+.dienstleistungen-garten {
+  display: block;
+  width: 80%;
+  margin: 5% 5%;
+  text-align: left;
+   }
+
+.dienstleistungen-garten ul {
+  list-style-type: none;
+  letter-spacing: 0.2em;
+  }
+
+
+.dienstleistungen-garten li {
+  color: rgb(3, 1, 134);
+  font-size: 1.4em;
+}
+
+.rechte-seite {
+  border: 5px solid black;
+  margin: -15% -5% 0% 15%;
+  background-color: #cf0404;
+  padding: 0.5% 0.5%;
+  max-width: fit-content;
+  text-align: center;
+  }
+
+.rechte-seite a:link {
+  font-size: 1.6em;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  }
+
+  .rechte-seite h4 {
+    color: white;
+    text-align: center;
+  }
+
+  @media screen and (max-width:900px) {
+    .rechte-seite {
+      display: none;
+    }
+  }
+
+.contactbutton {
+  display: block;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  margin: 4vh auto;
+  text-align: center;
+}
+
+.contactbutton img{
+  padding-right: 1vw;
+}
+
+.contactbutton a:link, a:visited {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  border: 1px solid blue;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  background-color: yellow;
+  padding: 1% 2.5%;
+ }
+
+.contactbutton a:hover, a:active {
+  background-color: blue;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .contactbutton {
+    font-size: 0.6em;
+    padding: 0;
+    width: 100%;
+   }
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  align-items: center;
+  justify-content: center;
+ }
+
+ @media only screen and (max-width: 800px) {
+  .contact {
+    font-size: 0.6em;
+    padding: 0;
+   }
+}
+
+.contact h4 {
+  padding: auto 10%;
+  margin: 0% 8%;
+  text-align: center;
+  color: white;
+ }
+
+.beschreibung {
+  display: inline-block;
+  width: 80%;
+  margin: 4% 8%;
+}
+
+.beschreibung p, h4 {
+  padding: auto 5%;
+  text-align: justify;
+}
+
+.beschreibung span {
+color: darkred;
+font-weight: bold;
+font-style: italic;
+}
+
+.landkarte {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto 5%;
+}
+
+.landkarte iframe {
+  margin: auto 10%;
+}
+
+.landkarte h3 {
+  text-align: center;
+  }
+
+.landkarte h4 {
+  text-align: left;
+  color: rgb(3, 1, 134);
+  justify-content: flex-start;
+}
+
+.landkarte li {
+  font-size: 1.3em;
+  list-style-type: none;
+}
+
+.footer {
+  height: 18vh;
+  bottom: 0px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    font-size: 0.6em;
+    padding: 0;
+  }
+}
+
+.adressdaten {
+  display: block;
+  margin: 0vh 5vw;
+  justify-content: center;
+  text-align: left;
+
+}
+.adressdaten h3{
+  color: rgb(255, 255, 255);
+}
+
+.contactdaten p{
+  color: rgb(255, 255, 255);
+}
+
+.impressum1 {
+  display: block;
+  /* text-align: center; */
+  margin: 0% 5% 0% 5%;
+ }
+
+.impressum1 a {
+  padding: 0% 2%;
+  color: rgb(255, 255, 255);
+  }
+
+.impressum2 {
+  margin: auto 10%;
+}
+
+
+.design {
+  display: block;
+  margin: 10vh 5vw;
+  text-align: right;
+}
+.design p{
+  color: white;
+  padding-left: 5vw:
+}
+
+.pink {
+width: 100%;
+}
+
+.pink h4{
+  color: black;
+}
+
+.bild1 {
+  border-radius: 8px;
+  border: 2px solid green;
+  float: left;
+  margin: 4vh 8vw;
+  width: 25vw;
+  height: auto;
+  background-color: white;
+  padding: 2vh 2vw;
+}
+
+#impressum {
+  margin-top: 8%;
+  background-color: rgba(66, 137, 234, 0.1);
+  background-size: cover;
+  margin-left: 15%;
+  }
+
+  /***********************************************************************
+ *  Blue Background
+ **********************************************************************/
+ .blue {
+  background: #27f;
+}
+
+
+ /*.blue{
+  background: #27f; /* Old browsers */
+/*  background: -moz-linear-gradient(top, #28f 0%, #020463 44%, #01023f 100%); /* FF3.6+ */
+/*  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));  Chrome,Safari4+ */
+/*  background: -webkit-linear-gradient(top, #28f 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+/*  background: -o-linear-gradient(top, #28f 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+/*  background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+/*  background: linear-gradient(top, #28f 0%, #020463 44%, #01023f 100%); /* W3C */
+/* }  */
